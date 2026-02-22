@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+<body>
+</body>
+<script>
+// array example
+var arr = ["jyoti","Pooja","Ritu","Priya"];
+
+document.write(arr);
+</script>
+</html>

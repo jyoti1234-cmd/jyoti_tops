@@ -1,0 +1,64 @@
+<html>
+<head>
+</head>
+<body>
+</body>
+<script>
+document.write("<br/>********print all array*******<br/>");
+//LEVEL 3 – If-Else
+var n = -3;
+var m = 3;
+if(m >= 0)
+{
+document.write("</br> POsitive number is :" + m);
+
+}
+else
+{
+document.write("</br> Negative number is :" + m);
+
+}
+document.write("<br/>**********************</br>")
+//shopping cart
+var cart = [
+ { item: "Shirt", price: 500, quantity: 2 },
+ { item: "Shoes", price: 1000, quantity: 1 }
+]
+var total=0;
+var totalbill=0;
+var bill=0;
+
+for(i=0;i<cart.length;i++)
+{
+document.write(cart[i].item + "</br>")
+total += cart[i].price * cart[i].quantity;
+}
+document.write("<br/>" + total +"<br/>")
+if(total > 2000)
+{
+dis = total % 0.10;
+totalbill = dis + total
+document.write("</br>totalbill :" + totalbill);
+}
+else
+{
+document.write("<br/>total is" + total);
+
+}
+document.write("<br/>**********************</br>")
+var student = [
+ { name: "Amit", marks: [60, 70, 80] },
+ { name: "Ravi", marks: [90, 85, 95] },
+ { name: "Sita", marks: [40, 50, 45] }
+]
+var totalm=0
+for(i=0;i<student.length;i++)
+{
+document.write(student[i].name + "</br>")
+totalm += student[i].marks;
+}
+document.write(totalm + "<br/>********first element  print*******<br/>");
+document.write("<br/>********first element  print*******<br/>");
+
+</script>
+</html>

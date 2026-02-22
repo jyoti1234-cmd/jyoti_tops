@@ -1,0 +1,84 @@
+<html>
+<head>
+</head>
+<body>
+</body>
+<script>
+// array example
+var arr = ["jyoti","Pooja","Ritu","Priya"];
+
+document.write(arr);
+document.write("<br/>********object print*******<br/>");
+
+//obj example
+
+var obj = {name:"jyoti",id:23,pass:789};
+document.write(obj.name);
+
+//array and object
+document.write("<br/>********array and object print*******<br/>");
+var employee = [
+{id:1,name:"jyoti",salary:15000,role:"hr"},
+{id:2,name:"mishra",salary:15000,role:"qa"},
+{id:3,name:"pooja",salary:15000,role:"developer"},
+{id:4,name:"ritu",salary:15000,role:"ui"}
+];
+
+document.write(employee[1].name);
+
+
+document.write("<br/>********for loop print*******<br/>");
+
+	for(i=0;i < employee.length;i++)
+	{
+		document.write(employee[i].name + "-" + employee[i].salary + "<br/>");
+	}
+
+
+document.write("<br/>********loop in condition print when role is hr*******<br/>");
+for(i=0;i<employee.length;i++)
+{
+if(employee[i].role == "hr")
+{
+document.write("name is " + employee[i].name);
+}
+}
+
+document.write("<br/>********object print*******<br/>");
+
+var student = [
+{id:1,name:"Priya",fees:5000},
+{id:2,name:"komal",fees:25000},
+{id:3,name:"pooja",fees:35000},
+{id:4,name:"ritu",fees:15000}
+];
+
+for(i=0;i< student.length;i++)
+{
+document.write(student[i].fees + "<br/>");
+}
+
+
+for(i=0;i< student.length;i++)
+{
+if(student[i].fees > 5000 )
+{
+document.write(student[i].name + "<br/>");
+}
+}
+document.write("test id");
+
+for(i=0;i< student.length;i++)
+{
+if(student[i].id > 2 )
+{
+document.write(student[i].name + "-" + student[i].fees + "<br/>");
+}
+}
+
+
+
+
+
+</script>
+</html>
