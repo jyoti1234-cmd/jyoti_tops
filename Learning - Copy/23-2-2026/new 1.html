@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+//Simple Addition Function
+//1st method
+function sum(){
+var a= 5;
+var b=10;
+var sum=a+b;
+document.write(sum);
+}
+sum();
+//2nd method
+document.write("<br/>*******************************<br/>");
+function sumper(a,b){
+var add=a+b;
+document.write(add);
+}
+sumper(5,20);
+document.write("<br/>*******************************<br/>");
+//3rd method
+function total(a=0,b=2){
+var add=a+b;
+document.write(`sum of a and b is : ${add} <br/>`);
+}
+total();
+total(5);
+total(5,12);
+//using return :: that return not print
+function num(name,c,d)
+{
+return name + "total number is :" + (c+d);
+}
+document.write(num("jyoti",5,10));
+//Even or Odd Checker
+document.write("<br/>*******************************<br/>");
+function evenoddcheck(num)
+{
+if(num % 2 == 0)
+{
+return "even"+ num;
+}
+else
+{
+return "odd";
+}
+}
+document.write(evenoddcheck(10));
+document.write(evenoddcheck(5));
+//Find Largest Number
+document.write("<br/>*******************************<br/>");
+function large(a,b,c)
+{
+if(a > b && a>c && a>b )
+{
+return "number is large" + a;
+}
+else if (b > a && b>c)
+{
+return "number is large" + b;
+}
+else
+{
+return "number is large" + c;
+}
+}
+document.write(large(60,20,40));
+
+//Convert Celsius to Fahrenheit.
+document.write("<br/>*******************************<br/>");
+function farconvert(n)
+{
+return (n * 9/5) + 32;
+}
+document.write("convert value is:" + farconvert(500));
+document.write("<br/>*******************************<br/>");
+//document.write("<br/>*******************************<br/>");
+function greet(name)
+{
+return `Hello "${name}" have a nice day !!`;
+}
+document.write(greet("Jyoti"));
+//Return the square of a number.
+function squ(m)
+{
+return m*m;
+}
+document.write("</br>" + squ(5));
+document.write("</br>" + squ(25));
+//Check Voting Eligibility
+function vot(age)
+{
+if(age > 18)
+{
+return "Eligible";
+}
+else
+{
+return "Not - Eligible";
+}
+}
+document.write("</br>" + vot(5));
+document.write("</br>" + vot(25));
+//Simple Interest Calculator
+function inte(p,r,t)
+{
+var ans = (p * r * t) / 100;
+return ans;
+}
+document.write("</br>" + inte(500,2,3));
+document.write("</br>" + inte(100,5,3));
+//Reverse a String (Basic Logic)
+function reverse(name)
+{
+
+return name.split("").reverse().join("");
+}
+document.write("</br>" + reverse("jyoti"));
+document.write("</br>" + reverse("mishra"));
+//Marks Result Function
+function marks(m)
+{
+if(m<35)
+{
+return `${m} fail`;
+}
+else if(m < 60)
+{
+return `${m} pass`;
+}
+else if(m < 80)
+{
+return `${m} First-pass`;
+}
+else
+{
+return `${m} dis`;
+}
+}
+document.write(marks(25) + "<br/>");
+document.write(marks(55) + "<br/>");
+document.write(marks(79) + "<br/>");
+document.write(marks(79) + "<br/>");
+document.write(marks(99) + "<br/>");
+
+document.write("<br/>*******************************<br/>");
+
+//craete a bill and apply discount
+
+function bill(amt)
+{
+if(amt >1000)
+{
+var discount = amt - 0.10;
+return discount;
+}
+else
+{
+return amt;
+}
+
+}
+document.write(bill(1500) + "<br/>");
+</script>
+</body>
+</html>
+
+
+*************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="card p-3">
+<div class="row">
+<div class="col-md-4">
+<label class="mb-3">Science</label>
+<input type="text" class="mb-3" id="inputmarksci"/>
+
+</div>
+
+<div class="col-md-4">
+<label class="mb-3">Hindi</label>
+<input type="text" class="mb-3" id="inputmarkhindi"/>
+</div>
+
+<div class="col-md-4">
+<label class="mb-3">English</label>
+<input type="text" class="mb-3" id="inputmarkeng"/>
+</div>
+</div>
+<button onclick="showresult()">Show Result</button>
+<p id="total"></p>
+
+</div>
+<script>
+function showresult()
+{
+var science = document.getElementById("inputmarksci").value;
+var hindi = document.getElementById("inputmarkhindi").value;
+var english = document.getElementById("inputmarkeng").value;
+var total = document.getElementById("total");
+var marks = 0;
+marks = science + hindi + english;
+total.innerHTML = `total marks is ${marks} is your result is : fail and your grade is A`;
+
+/*if(input <= 35)
+{
+output.innerHTML = `total marks is ${input} is your result is : fail and your grade is C`;
+output.style.color="red";
+}
+else if(input <= 60)
+{
+output.innerHTML= `total marks is ${input} is your result is : pass and your grade is B`;
+output.style.color="green";
+}
+else
+{
+document.getElementById("outputmark").innerHTML= `total marks is ${input} is your result is : Dis and your grade is A`;
+output.style.color="green";
+}*/
+
+}
+</script>
+</body>
+</html>
